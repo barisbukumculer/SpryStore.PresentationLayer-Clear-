@@ -24,6 +24,7 @@ namespace SpryStore.PresentationLayer.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(RegisterViewModel registerViewModel)
         {
+            
             AppUser appUser = new AppUser()
             {
                 Name = registerViewModel.Name,
@@ -39,8 +40,12 @@ namespace SpryStore.PresentationLayer.Controllers
             }
             else
             {
-                return View();
-            }
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
+                }
+				return View();
+			}
         }
     }
 }
