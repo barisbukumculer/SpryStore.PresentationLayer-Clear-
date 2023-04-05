@@ -1,0 +1,21 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <label>Çalışan Adı</label>
+    <input type="text" class="form-control" asp-for="EmployeeName" />
+    <br />
+    <label>Çalışan Soyadı</label>
+    <input type="text" class="form-control" asp-for="EmployeeSurname" />
+    <br />
+    <label>Çalışanın Resmi</label>
+    <input type="text" class="form-control" asp-for="EmployeeImage" />
+    <br />
+    <label>Çalışanın Statüsü</label>
+    <input type="text" class="form-control" asp-for="EmployeeStatus" />
+    <br />
+    <button class="btn btn-info">Çalışan Ekle</button>
+</form>
