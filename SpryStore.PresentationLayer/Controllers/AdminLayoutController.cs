@@ -5,7 +5,7 @@ namespace SpryStore.PresentationLayer.Controllers
 {
     public class AdminLayoutController : Controller
     {
-        //jegajzbdwzubhiwe -- mail işlemlerinde kullanılacak google key
+        //cgyhvcvntutpbvnb -- mail işlemlerinde kullanılacak google key
         public IActionResult Index()
         {
             Random rnd=new Random();

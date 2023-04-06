@@ -1,0 +1,26 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "GetLast4Products";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h1>Son Eklenen 4 Ürün</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ürün ADI</th>
+        <th>Ürün Fiyatı</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.ProductName</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
